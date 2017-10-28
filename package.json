@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "postcss ./src/css/main.css -c postcss.config.js -o ./dist/css/main.min.css --watch"
+    "css": "postcss ./src/css/main.css -c postcss.config.js -o ./dist/css/main.min.css --watch",
+    "pug": "pug src/templates/index.pug -o dist -P"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,10 @@
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
-    "postcss-url": "^7.1.2"
+    "postcss-url": "^7.1.2",
+    "uncss": "^0.15.0"
+  },
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
