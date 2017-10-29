@@ -1,8 +1,9 @@
 /* custom properties */
 :root {
   --fontSize: 1rem;
-  --mainColor: #12345678;
-  --highlightColor: hwb(190, 35%, 20%);
+  --mainColor: #0e95fc44;
+  --highlightColor: hwb(190, 55%, 20%);
+  --green: rgb(97, 243, 255);
   }
   
   /* custom properties set & @apply rule */
@@ -18,5 +19,5 @@
     @custom-media --viewport-medium (width <= 50rem);
 
       /* custom selectors */
-  @custom-selector :--heading h1, h2, h3, h4, h5, h6;
-  :--heading { margin-top: 0 }
+  @custom-selector :--heading h1, h2, h3, h4, h5, h6, p;
+  :--heading { margin: 0 }
