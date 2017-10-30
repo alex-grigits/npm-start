@@ -6,12 +6,12 @@
   "scripts": {
     "build:css": "postcss -c postcss.config.js src/css/main.css -o dist/css/main.min.css",
     "build:pug": "pug src/templates/index.pug -o dist -P",
-
+    "build:js": "webpack",
     "build:images": "imagemin src/img/* -o dist/img",
     "build": "run-p build:*",
     "watch:css": "postcss -c postcss.config.js src/css/main.css -o dist/css/main.min.css -w",
     "watch:pug": "pug src/templates/index.pug -o dist -P -w",
-
+    "watch:js": "webpack --watch",
     "watch:images": "onchange 'src/img/*' -- npm run build:images",
     "copy:fonts": "copyfiles -f src/fonts/**/* dist/fonts",
     "fonts": "onchange 'src/fonts/**/*' -- npm run copy:fonts",
@@ -38,7 +38,11 @@
     "postcss-url": "^7.1.2",
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^2.6.2",
-    "uncss": "^0.15.0"
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "uncss": "^0.15.0",
+    "webpack-cli": "^1.4.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
 }
