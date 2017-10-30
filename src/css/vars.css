@@ -4,6 +4,7 @@
   --mainColor: #ddb70d44;
   --highlightColor: hwb(190, 55%, 20%);
   --green: rgb(97, 243, 255);
+  --ff-roboto: 'Roboto';
   }
   
   /* custom properties set & @apply rule */

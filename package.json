@@ -6,16 +6,19 @@
   "scripts": {
     "build:css": "postcss -c postcss.config.js src/css/main.css -o dist/css/main.min.css",
     "build:pug": "pug src/templates/index.pug -o dist -P",
+
+    "build:images": "imagemin src/img/* -o dist/img",
     "build": "run-p build:*",
-    "images": "mkdir -p dist/img && cp src/img/* dist/img",
-    "watch:images": "onchange 'src/img/*' -- npm run images",
-    "copy:fonts": "copyfiles -f src/fonts/**/* dist/fonts",
-    "watch:fonts": "onchange 'src/fonts/**/*' -- npm run copy:fonts",
     "watch:css": "postcss -c postcss.config.js src/css/main.css -o dist/css/main.min.css -w",
     "watch:pug": "pug src/templates/index.pug -o dist -P -w",
+
+    "watch:images": "onchange 'src/img/*' -- npm run build:images",
+    "copy:fonts": "copyfiles -f src/fonts/**/* dist/fonts",
+    "fonts": "onchange 'src/fonts/**/*' -- npm run copy:fonts",
     "watch:serve": "browser-sync --server 'dist' start --files 'dist/css/*.css, dist/index.html'",
-    "start": "npm-run-all clean:dist build images --parallel watch:*",
-    "clean:dist": "rimraf 'dist'"
+    "clean:dist": "rimraf 'dist'",
+    "start": "npm-run-all clean:dist build --parallel watch:*",
+    "postinstall": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +33,7 @@
     "onchange": "^3.2.1",
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
+    "postcss-font-magician": "^2.1.0",
     "postcss-import": "^11.0.0",
     "postcss-url": "^7.1.2",
     "pug-cli": "^1.0.0-alpha6",
