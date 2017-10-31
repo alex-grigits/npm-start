@@ -2,37 +2,3 @@
 @import "base";
 @import "layout.css";
 
-
-.centered {
-  @apply --centered;
-}
-
-.header, .footer {
-  background: var(--highlightColor);
-}
-
-
-h1 {
-  color: rgb(250, 15, 15);
-  text-align: center;
-  font-size: 36px;
-  padding: 40px 0;
-}
-  
-  /* some var() & calc() */
-  body {
-  background-color: var(--mainColor);
-  font-family: var(--ff-roboto);
-  font-size: var(--fontSize)*1.2;
-  line-height: calc(var(--fontSize) * 1.7);
-  }
-  
-  /* custom media query usage */
-  @media (--viewport-medium) {
-  body { font-size: calc(var(--fontSize) * .9); }
-  }
- 
-h3 {
-  padding: 15px;
-  text-align: center;
-}

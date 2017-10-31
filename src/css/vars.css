@@ -1,24 +1,9 @@
 /* custom properties */
 :root {
-  --fontSize: 1rem;
+  --fontSize: 16px;
   --mainColor: #ddb70d44;
   --highlightColor: hwb(190, 55%, 20%);
   --green: rgb(97, 243, 255);
-  --ff-roboto: 'Roboto';
+  --ff-main: 'Open Sans';
   }
   
-  /* custom properties set & @apply rule */
-  :root {
-    --centered: {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    };
-  }
-
-    /* custom media queries */
-    @custom-media --viewport-medium (width <= 50rem);
-
-      /* custom selectors */
-  @custom-selector :--heading h1, h2, h3, h4, h5, h6, p;
-  :--heading { margin: 0 }

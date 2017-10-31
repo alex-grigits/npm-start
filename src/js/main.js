@@ -1,3 +1,3 @@
-import hideP from './hello';
+import hello from './hello';
 
-hideP();
+hello();

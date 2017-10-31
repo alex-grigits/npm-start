@@ -1,7 +1,5 @@
-export default function hideP() {
+export default function hello() {
   $(document).ready(function(){
-    $("p").click(function(){
-          $(this).hide();
-      });
+    console.log('Hello from hello.js');
   });
 }

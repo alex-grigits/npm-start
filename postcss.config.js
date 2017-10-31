@@ -5,6 +5,6 @@ module.exports = (ctx) => ({
     require('postcss-url')({}),
     require('postcss-cssnext')({}),
     require('postcss-font-magician')({}),
-    require('cssnano')({'autoprefixer': false})
+    // require('cssnano')({'autoprefixer': false})
   ]
  });

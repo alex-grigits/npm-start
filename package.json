@@ -1,7 +1,7 @@
 {
-  "name": "init-dev-temp",
-  "version": "1.0.0",
-  "description": "",
+  "name": "npm-start",
+  "version": "0.0.1",
+  "description": "bolerplate based on postcss, webpack and npm scripts",
   "main": "index.js",
   "scripts": {
     "build:css": "postcss -c postcss.config.js src/css/main.css -o dist/css/main.min.css",
@@ -21,7 +21,7 @@
     "postinstall": "npm run build && npm run start"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alex Grigits",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.13",
